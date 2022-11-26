@@ -1,8 +1,7 @@
 import React from 'react';
-import { AppRouter } from './AppRouter';
+import { AppRouter } from './app/router/AppRouter';
 
 function App() {
-
 	return (
 		<AppRouter />
 	);
