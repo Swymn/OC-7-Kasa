@@ -1,0 +1,10 @@
+@import '../../../variables';
+
+.tag-container {
+    @include center;
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: $main-color;
+    color: #fff;
+}
