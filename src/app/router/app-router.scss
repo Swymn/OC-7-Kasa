@@ -6,11 +6,11 @@
 }
 
 body {
-    padding: 4% 10%;
+    margin: 4% 10%;
 }
 
 @media screen and (max-width: $mobile-size) {
     body {
-        padding: 5%;
+        margin: 5%;
     }
 }
