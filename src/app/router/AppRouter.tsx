@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Header } from '../header/Header';
+import { Footer } from '../footer/Footer';
 
 import './app-router.scss';
 
@@ -14,6 +15,7 @@ export const AppRouter = () => {
                 <Route path="/" element={<div></div>} />
                 <Route path="*" element={<div>Not Found</div>} />
             </Routes>
+            <Footer />
         </Router>
     );
 }

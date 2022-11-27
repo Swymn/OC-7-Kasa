@@ -1,0 +1,21 @@
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #000;
+}
+
+.footer-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh 0;
+    color: #fff;
+    font-size: 100%;
+    margin: 3% 0 1.25%;
+}
