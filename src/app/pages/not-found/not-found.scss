@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+
+.not-found-container {
+    @include center;
+
+    flex-direction: column;
+    padding-top: 5%;
+    color: $main-color;
+}
+
+.not-found-title {
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+.not-found-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 2% 0;
+}
+.not-found-link {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $main-color;
+    text-decoration: underline;
+    margin: 6% 0;
+}
+
+@media screen and (max-width: $mobile-size) {
+
+    .not-found-container {
+        padding: 25% 0;
+        text-align: center;
+    }
+
+    .not-found-title {
+        font-size: 5rem;
+    }
+    .not-found-subtitle {
+        font-size: 1rem;
+    }
+    .not-found-link {
+        font-size: 1rem;
+        margin-top: 30%;
+    }
+
+}

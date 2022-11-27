@@ -6,6 +6,7 @@ import { Footer } from '../components/footer/Footer';
 
 import { HomePage } from '../pages/home/HomePage';
 import { AboutPage } from '../pages/about/AboutPage';
+import { NotFoundPage } from '../pages/not-found/NotFoundPage';
 
 import './app-router.scss';
 
@@ -22,8 +23,8 @@ export const AppRouter = () => {
             <Routes>
                 <Route path={AppRoute.Home} element={<HomePage />} />
                 <Route path={AppRoute.About} element={<AboutPage />} />
-                <Route path={AppRoute.NotFound} element={<div>Not Found</div>} />
-                <Route path="*" element={<div>Not Found</div>} />
+                <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
             <Footer />
         </Router>
