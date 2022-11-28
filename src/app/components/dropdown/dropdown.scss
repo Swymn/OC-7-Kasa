@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+$width: 80vw;
+
+.dropdown {
+    overflow: hidden;
+    width: $width;
+    background-color: #f6f6f6;
+    transition: all 0.5s ease;
+}
+
+.dropdown__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    width: $width;
+    padding: 0 2%;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: $main-color;
+}
+
+.dropdown__content {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: all 0.5s ease;
+}
+
+.icon-rotate {
+    transform: rotate(180deg);
+}
