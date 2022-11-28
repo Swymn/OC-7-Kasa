@@ -19,13 +19,15 @@ export enum AppRoute {
 export const AppRouter = () => {
     return (
         <Router>
-            <Header />
-            <Routes>
-                <Route path={AppRoute.Home} element={<HomePage />} />
-                <Route path={AppRoute.About} element={<AboutPage />} />
-                <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
+            <main>
+                <Header />
+                <Routes>
+                    <Route path={AppRoute.Home} element={<HomePage />} />
+                    <Route path={AppRoute.About} element={<AboutPage />} />
+                    <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+            </main>
             <Footer />
         </Router>
     );

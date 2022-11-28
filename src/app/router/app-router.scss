@@ -5,12 +5,14 @@
 	margin: 0;
 }
 
-body {
+main {
 	margin: 4% 10%;
+	min-height: 68vh;
 }
 
 @media screen and (max-width: $mobile-size) {
-	body {
+	main {
 		margin: 5%;
+		min-height: 69vh;
 	}
 }
