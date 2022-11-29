@@ -21,7 +21,7 @@ export const HomePage = () => {
 
             <section className="cards-container">
                 {locations && locations.map((location, index) => (
-                    <Box key={index} title={location.title} imageUrl={location.cover} />
+                    <Box key={location.id} location={location} />
                 ))}                
                 {/* { [...Array(6)].map((_, i) => <Box title="Titre de la location" key={i} />) } */}
             </section>
