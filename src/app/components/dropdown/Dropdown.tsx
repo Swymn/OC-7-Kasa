@@ -12,7 +12,7 @@ export const Dropdown = ({ label, children }: DropdownProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
-        <div style={{ height: isOpen ? "52vh" : "52px" }} className="dropdown">
+        <div style={{ height: isOpen ? "38vh" : "38px" }} className="dropdown">
             <button className="dropdown__button" onClick={() => setIsOpen((prevState) => !(prevState))}>
                 <p>{label}</p>
                 <span className={`icon ${isOpen ? "icon-rotate" : ""}`}>

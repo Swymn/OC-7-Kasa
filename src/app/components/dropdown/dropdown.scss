@@ -1,6 +1,6 @@
 @import '../../../styles/variables';
 
-$width: 80vw;
+$width: 100%;
 
 .dropdown {
     overflow: hidden;
@@ -13,7 +13,7 @@ $width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 52px;
+    height: 38px;
     width: $width;
     padding: 0 2%;
     border-radius: 10px;
@@ -25,6 +25,7 @@ $width: 80vw;
 .dropdown__content {
     padding: .5rem 1rem;
     border-radius: 10px;
+    color: $main-color;
 }
 
 .icon {
@@ -32,6 +33,7 @@ $width: 80vw;
     height: 20px;
     fill: #fff;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .icon-rotate {
