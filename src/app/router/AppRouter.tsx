@@ -6,6 +6,7 @@ import { Footer } from '../components/footer/Footer';
 
 import { HomePage } from '../pages/home/HomePage';
 import { AboutPage } from '../pages/about/AboutPage';
+import { LocationPage } from '../pages/location/LocationPage';
 import { NotFoundPage } from '../pages/not-found/NotFoundPage';
 
 import './app-router.scss';
@@ -14,6 +15,7 @@ export enum AppRoute {
     Home = '/',
     About = '/about',
     NotFound = '/not-found',
+    Location = '/location/',
 }
 
 export const AppRouter = () => {
@@ -25,6 +27,7 @@ export const AppRouter = () => {
                     <Route path={AppRoute.Home} element={<HomePage />} />
                     <Route path={AppRoute.About} element={<AboutPage />} />
                     <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
+                    <Route path={AppRoute.Location + ':id'} element={<LocationPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </main>

@@ -1,18 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../router/AppRouter';
+import { Location } from '../../../database/location.service';
 
 import './box.scss';
 
 interface BoxProps {
-    title: string;
-    imageUrl?: string;
+    location: Location;
 }
 
-export const Box = ({ title, imageUrl }: BoxProps) => {
+export const Box = ({ location }: BoxProps) => {
     return (
-        <div className="box-container">
-            <div className='box-background'></div>
-            {imageUrl ? <img src={imageUrl} alt={title} /> : <div className='box-overlay'></div>}
-            <p className="box-title">{title}</p>
-        </div>
+        <Link to={AppRoute.Location + location.id} className="box-container">
+            <div className='box-overlay'></div>
+            {location.cover ? <img src={location.cover} alt={location.title} className="box-image" /> : <div className='box-background'></div>}
+            <p className="box-title">{location.title}</p>
+        </Link>
     );
 }
