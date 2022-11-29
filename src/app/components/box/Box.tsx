@@ -10,8 +10,8 @@ interface BoxProps {
 export const Box = ({ title, imageUrl }: BoxProps) => {
     return (
         <div className="box-container">
-            <div className='box-background'></div>
-            {imageUrl ? <img src={imageUrl} alt={title} /> : <div className='box-overlay'></div>}
+            <div className='box-overlay'></div>
+            {imageUrl ? <img src={imageUrl} alt={title} className="box-image" /> : <div className='box-background'></div>}
             <p className="box-title">{title}</p>
         </div>
     );
