@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { LocationService, Location } from '../../../database/location.service';
-import { Caroussel } from "../../components/caroussel/Caroussel";
+import { Carousel } from "../../components/carousel/Carousel";
 
 import "./location.scss";
 
@@ -19,7 +19,7 @@ export const LocationPage = () => {
     return (
         <div className="location-container">
             <h1>Location: {location?.title}</h1>
-            <Caroussel />
+            { location?.pictures && <Carousel pictures={location.pictures}/> }
         </div>
     )
 }
