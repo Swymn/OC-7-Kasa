@@ -4,6 +4,7 @@ import { LocationService, Location } from '../../../database/location.service';
 import { Carousel } from "../../components/carousel/Carousel";
 
 import "./location.scss";
+import { Dropdown } from '../../components/dropdown/Dropdown';
 
 export const LocationPage = () => {
 
@@ -36,7 +37,19 @@ export const LocationPage = () => {
                 </div>
             </div>
 
-            
+            <div className="location-container__dropdowns">
+                <Dropdown label="Description">
+                    <p>{location?.description}</p>
+                </Dropdown>
+
+                <Dropdown label="Équipements">
+                    <ul>
+                        {location?.equipments.map((equipment, index) => (
+                            <li key={index}>{equipment}</li>
+                        ))}
+                    </ul>
+                </Dropdown>
+            </div>
         </div>
     )
 }

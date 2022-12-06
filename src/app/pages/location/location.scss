@@ -58,3 +58,8 @@
     }
 }
 
+.location-container__dropdowns {
+    display: flex;
+    flex-direction: row;
+    gap: 4vh;
+}

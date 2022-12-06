@@ -19,8 +19,6 @@ export const Dropdown = ({ label, children }: DropdownProps) => {
         return (dropdownContent.offsetHeight + 54) + "px";
     }
 
-    console.log(getSize());
-
     return (
         <div style={{ height: isOpen ? getSize() : "38px" }} className="dropdown">
             <button className="dropdown__button" onClick={() => setIsOpen((prevState) => !(prevState))}>
