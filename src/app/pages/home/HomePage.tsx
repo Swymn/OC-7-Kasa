@@ -20,10 +20,12 @@ export const HomePage = () => {
             <Banner title="Chez vous, partout et ailleurs" imgUrl="https://picsum.photos/800/200"/>
 
             <section className="cards-container">
-                {locations && locations.map((location, index) => (
-                    <Box key={location.id} location={location} />
-                ))}                
-                {/* { [...Array(6)].map((_, i) => <Box title="Titre de la location" key={i} />) } */}
+                {!!locations && locations?.length > 0
+                    ? locations.map((location, index) => (
+                        <Box key={location.id} title={location.title} cover={location.cover} id={location.id} />
+                    ))
+                    : [...Array(6)].map((_, i) => <Box title="Titre de la location" id={i.toString()} key={i} />)
+                }
             </section>
         </div>
     );
