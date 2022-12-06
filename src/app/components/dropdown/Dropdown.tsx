@@ -10,9 +10,19 @@ export interface DropdownProps {
 export const Dropdown = ({ label, children }: DropdownProps) => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const labelId = "dropdown__content__" + label.toLowerCase().replace(" ", "-");
+
+    const getSize = () => {
+        const dropdownContent = document.getElementById(labelId);
+        if (!dropdownContent) return "18vh";
+        // 54 = 38px (height of button) + 16px (padding)
+        return (dropdownContent.offsetHeight + 54) + "px";
+    }
+
+    console.log(getSize());
 
     return (
-        <div style={{ height: isOpen ? "38vh" : "38px" }} className="dropdown">
+        <div style={{ height: isOpen ? getSize() : "38px" }} className="dropdown">
             <button className="dropdown__button" onClick={() => setIsOpen((prevState) => !(prevState))}>
                 <p>{label}</p>
                 <span className={`icon ${isOpen ? "icon-rotate" : ""}`}>
@@ -21,7 +31,7 @@ export const Dropdown = ({ label, children }: DropdownProps) => {
                     </svg>
                 </span>
             </button>
-            <div className="dropdown__content">
+            <div className="dropdown__content" id={labelId}>
                 {children}
             </div>
         </div>
