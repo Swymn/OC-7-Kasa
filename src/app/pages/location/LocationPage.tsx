@@ -18,8 +18,25 @@ export const LocationPage = () => {
 
     return (
         <div className="location-container">
-            <h1>Location: {location?.title}</h1>
             { location?.pictures && <Carousel pictures={location.pictures}/> }
+            <div className="location-container__description">
+                <div className="location-container__profile-title">
+                    <h1 className="title">{location?.title}</h1>
+
+                    <h2 className="subtitle">{location?.location}</h2>
+                </div>
+
+                <div className="location-container__profile">
+                    <div className="location-container__profile-description">
+                        <p>{location?.host.name.split(" ")[0]}</p>
+                        <p>{location?.host.name.split(" ").slice(1).join('')}</p>
+                    </div>
+
+                    <img className="location-container__profile-piture" src={location?.host.picture} alt={`${location?.host.name}`} />
+                </div>
+            </div>
+
+            
         </div>
     )
 }
