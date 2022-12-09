@@ -40,3 +40,13 @@ $width: 100%;
 .icon-rotate {
     transform: rotate(180deg);
 }
+
+.location-container__profile-rating {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.25rem;
+    padding: 1vh 0;
+}
