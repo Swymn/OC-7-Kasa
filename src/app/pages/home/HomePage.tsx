@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LocationService, Location } from '../../../database/location.service';
+import { LocationService, Location } from '../../../service/location.service';
 import { Banner } from '../../components/banner/Banner';
 import { Box } from '../../components/box/Box';
 
@@ -17,7 +17,7 @@ export const HomePage = () => {
 
     return (
         <div className="home-container">
-            <Banner title="Chez vous, partout et ailleurs" imgUrl="https://picsum.photos/800/200"/>
+            <Banner title="Chez vous, partout et ailleurs" imgUrl="https://picsum.photos/800/200" />
 
             <section className="cards-container">
                 {!!locations && locations?.length > 0

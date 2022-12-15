@@ -23,9 +23,6 @@ export const Carousel = ({ pictures }: { pictures: string[]}) => {
     const goToNextSlide = (e: React.MouseEvent<HTMLDivElement>) => {
         e.preventDefault();
 
-        console.log('goToNextSlide');
-        
-
         let index = activeIndex;
         let slidesLength = pictures.length - 1;
 
