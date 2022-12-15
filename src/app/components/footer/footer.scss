@@ -18,3 +18,9 @@
     font-size: 100%;
     margin: 3% 0 1.25%;
 }
+
+@media screen and (max-width: $mobile-size) {
+    .footer-sub-container {
+        margin: 10% 0;
+    }
+}
